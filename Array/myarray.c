@@ -32,11 +32,37 @@ void write( int *array, int *size,  int value){
         
     }else 
     {
-        printf("!! \n");
+        printf("index out of range !! \n");
     }
 
 
 }
-int* insert(int *array, int *size, int index, int value);
-int* delete(int *array, int *size, int index);
+void insert(int *array, int *size, int index, int value){
+    if( index>=0 && index<arrayMax && *size<arrayMax && index<=*size){
+        for (int i=*size;i>index;i--){
+            *(array+i)=*(array+i-1);
+        }
+        *(array+index)=value;
+        *size=*size+1;
+    }else{
+        printf("index out of range or size will out of range !!\n");
+    }
+
+}
+void delete(int *array, int *size, int index){
+ 
+    if( index>=0 && index < arrayMax && *size>0){
+        for(int i=index;i<*size-1;i++){
+            //printf("!%d!\n",i);
+            *(array+i)=*(array+i+1);
+            
+        }
+        *(array+ (*size))=0;
+        *size=*(size)-1;
+        //printf("%d",*size);
+    }else{
+        printf("index out of range or size will out of range !!\n");
+    }
+
+}
 

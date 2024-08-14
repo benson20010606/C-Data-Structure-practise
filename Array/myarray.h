@@ -3,9 +3,9 @@
 #include <stdlib.h>
 #define arrayMax 100
 void show (int* array, int size);
-void  read(int* array,int size, int index);
+void read(int* array,int size, int index);
 void write( int *array, int *size, int value);
-int* insert(int *array, int *size, int index, int value);
-int* delete(int *array, int *size, int index);
+void insert(int *array, int *size, int index, int value);
+void delete(int *array, int *size, int index);
 
 #endif

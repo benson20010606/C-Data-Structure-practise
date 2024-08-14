@@ -50,15 +50,24 @@ int main(int argc, char *argv[]){
             /* code */
                 printf("which value  u want to add at index %d :",size);
                 scanf("%d",&value);
-                printf("%d!!!!!!!!\n",value);
+
                 clear();
                 write( array_t, &size,value);
                 break;
             case '3' :
             /* code */
+                printf("which index u want to insert :");
+                scanf("%d",&index); clear();
+                printf("which value  u want to add at index %d :",index);
+                scanf("%d",&value); clear();
+                insert(array_t, &size,  index,  value);
+
                 break;
             case '4' :
             /* code */
+                printf("which index u want to delet :");
+                scanf("%d",&index); clear();
+                delete(array_t,&size,index);
                 break;
 
 
