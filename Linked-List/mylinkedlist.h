@@ -14,10 +14,12 @@ typedef struct Node
 Node* createNode(int value);
 void insertAtHead(Node** head, int value);
 void insertAtTail(Node** head, int value);
+void deletefromHead(Node** head);
+void deletefromTail(Node** head);
 void deleteNode(Node** head, int value);
 Node* search(Node* head, int value);
 void printList(Node* head);
-void freeList(Node* head);
+void freeList(Node** head);
 
 
 #endif
