@@ -66,7 +66,7 @@ void deleteNode(Node** head, int value){
     }else{
         Node* temp=*head;
         if (temp->value == value){
-            deletfromHead(head);
+            deletefromHead(head);
         }else{
            Node* prev=NULL;
            while (temp!=NULL && temp->value != value ){
@@ -78,7 +78,7 @@ void deleteNode(Node** head, int value){
             return;
            }
            if (temp->Next==NULL){
-                deletfromTail(head);
+                deletefromTail(head);
            }else{
             prev->Next=temp->Next;
             free(temp);
