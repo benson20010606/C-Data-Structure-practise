@@ -15,19 +15,21 @@ void insertAtHead(Node** head, int value){
     *head=newnode;
 
 }
-void insertAtTail(Node** head, int value){
+Node* insertAtTail(Node** head, int value){
     Node* newnode= createNode(value);
     if (*head==NULL){
         *head=newnode;
+       
     }else{
         Node* temp=*head;
         while((temp->Next)!=NULL){
             temp=temp->Next;
 
-        }
+        }    
         temp->Next=newnode;
+        
     }
-
+    return newnode;
 }
 
 

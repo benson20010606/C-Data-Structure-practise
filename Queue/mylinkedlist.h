@@ -13,7 +13,7 @@ typedef struct Node
 
 Node* createNode(int value);
 void insertAtHead(Node** head, int value);
-void insertAtTail(Node** head, int value);
+Node* insertAtTail(Node** head, int value);
 void deletefromHead(Node** head);
 void deletefromTail(Node** head);
 void deleteNode(Node** head, int value);
