@@ -16,9 +16,9 @@ TreeNode* insertNode(TreeNode* parent, int value){
         return createNode(value);
     }
     if( parent->value >= value){
-        insertNode( parent->left_child, value);
+         parent->left_child=insertNode( parent->left_child, value);
     }else if (parent->value < value){
-        insertNode( parent->right_child, value);
+         parent->right_child=insertNode( parent->right_child, value);
     }
     return parent;
 }
@@ -56,7 +56,7 @@ TreeNode* deleteNode(TreeNode* parent,int value){
         parent->right_child = deleteNode(parent->right_child,value);
     }else{
        
-        if(parent->left_child==NULL&& parent->left_child==NULL){
+        if(parent->left_child==NULL&& parent->right_child==NULL){
             free(parent);
             return NULL;
         }else if(parent->left_child==NULL ){
@@ -65,7 +65,7 @@ TreeNode* deleteNode(TreeNode* parent,int value){
             free(parent);
             return temp;
         }else if(parent->right_child==NULL){
-            TreeNode * temp =parent->right_child;
+            TreeNode * temp =parent->left_child;
             free(parent);
             return temp;
         }
@@ -128,10 +128,11 @@ void traversal(TreeNode* parent){
 int calculateHeight(TreeNode* parent){
     if(parent==NULL){
         return 0;
-        int left_hight=calculateHeight(parent->left_child);
-        int right_hight=calculateHeight(parent->right_child);
-        return (left_hight>right_hight? left_hight:right_hight)+1;
+       
     }
+    int left_hight=calculateHeight(parent->left_child);
+    int right_hight=calculateHeight(parent->right_child);
+    return (left_hight>right_hight? left_hight:right_hight)+1;
 }
 void clearTree(TreeNode* parent){
     if (parent== NULL){

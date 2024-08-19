@@ -6,8 +6,8 @@
 typedef struct TreeNode 
 {
     int value;
-    struct TreeNodeNode* left_child;
-    struct TreeNodeNode* right_child;
+    struct TreeNode* left_child;
+    struct TreeNode* right_child;
 } TreeNode ;
 
 
