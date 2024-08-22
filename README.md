@@ -11,7 +11,7 @@ Complier:MinGW
 4. Queue (2024/08/16)
 5. Tree Structure  
     * Binary Search Tree  (2024/08/19)
-    * Binary Tree & Heap ()
+    * Binary Tree & Heap  (2024/08/22)
 6. Graph Structure
 7. Sorting
 8. Search
