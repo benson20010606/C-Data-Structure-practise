@@ -12,16 +12,12 @@ typedef struct TreeNode
     struct TreeNode* right_child;
 } TreeNode ;
 
-
-
 TreeNode* createNode(int value);
 TreeNode* insertNode(TreeNode* parent, int value);
 int  deleteNode(TreeNode** parent);
 TreeNode * heapify(TreeNode* parent);
 
-
-
-void traversal(TreeNode* parent);
+int  traversal(TreeNode* parent);
 int calculateHeight(TreeNode* parent) ;
 void clearTree(TreeNode* parent);
 

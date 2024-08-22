@@ -23,12 +23,9 @@ int main(int argc, char *argv[]){
 
         printf("\n\n1. insert  ");	
         printf("2. delete  ");	
-        printf("3. search  ");	
-        printf("4. max  ");	
-        printf("5. min  ");	
-        printf("6. traversal  ");	
-        printf("7. Height  ");
-        printf("8. clearTree  ");
+        printf("3. traversal  ");	
+        printf("4. Height  ");
+        printf("3. clearTree  ");
         printf("Q. exit  ");
 
  
@@ -50,53 +47,23 @@ int main(int argc, char *argv[]){
 
             case '2' :
             /* code */
-                printf("which value  u want to delete : ");
-                scanf("%d",&value);
-                clear();
-                root=deleteNode(root);
+                printf(" delete max maximum : ");
+
+                value=deleteNode(&root);
+                printf("Maximum is %d",value);
         
                 //
                 break;
+
             case '3' :
-            /* code */
-                printf("which value  u want to search : ");
-                scanf("%d",&value);
-                clear();
-                result =searchNode(root, value);
-                if (result!=NULL){
-                    printf("value %d is at %p",value,result);
-                }else{
-                    printf("can't find value %d",value);
-                }
-                break;
-                //
-            case '4' :
-            /* code */
-                result=findMax(root);
-                if (result != NULL){
-                    printf("The maximum is %d , at %p",result->value,result);
-                }else{
-                    printf("NULL!");
-                }
-                break;
-            case '5' :
-            /* code */
-                result=findMin(root);
-                if (result != NULL){
-                    printf("The minimum is %d , at %p",result->value,result);
-                }else{
-                    printf("NULL!");
-                }
-                break;
-            case '6' :
             /* code */
                 traversal(root);
                 break;
-            case '7' :
+            case '4' :
                printf("The tree hight is %d",calculateHeight(root));
                
                 break;
-            case '8' :
+            case '5' :
                 clearTree(root);
                 break;
             case 'Q' :

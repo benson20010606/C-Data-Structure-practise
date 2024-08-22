@@ -24,27 +24,39 @@ TreeNode* insertNode(TreeNode* parent, int value){
             last=queue[front++];
 
             if(last->left_child !=NULL){
-                queue[++rear]=last->left_child;
+                queue[rear++]=last->left_child;
             }else{
                 last->left_child=createNode(value);
                 break;
             }
+
             if(last->right_child != NULL){
-                queue[++rear]=last->right_child;
+                queue[rear++]=last->right_child;
             }else{
                 last->right_child=createNode(value);
                 break; 
             }
         }
+
+        for (int i=(rear-1)/2;i>=0;i--){
+            queue[i]=heapify(queue[i]);
+        }
     }
-  
-    return heapify(parent);
+    return parent;
 }
+
+
+
 int deleteNode(TreeNode** parent){
     if( *parent== NULL){
         return -1;
     }
     int max = (*parent)->value;
+    if ((*parent)->left_child == NULL && (*parent)->right_child== NULL){
+        *parent=NULL;
+  
+        return max;
+    }
 
     TreeNode* last = NULL;
     TreeNode * queue[NODE_MAX];
@@ -55,10 +67,10 @@ int deleteNode(TreeNode** parent){
         last=queue[front++];
 
         if(last->left_child !=NULL){
-            queue[++rear]=last->left_child;
+            queue[rear++]=last->left_child;
         }
         if(last->right_child != NULL){
-            queue[++rear]=last->right_child;
+            queue[rear++]=last->right_child;
         }
     }
     (*parent)->value=last->value;
@@ -120,15 +132,19 @@ TreeNode* findLastNode(TreeNode* parent){
 */
 
 
-void traversal(TreeNode* parent){
+int traversal(TreeNode* parent){
+
     if(parent== NULL){
 
-        return;
+        return 0;
+    }else{
+        traversal(parent->left_child);
+        printf("%2d ",parent->value);
+        traversal(parent->right_child);
+       
     }
-    
-    traversal(parent->left_child);
-    printf("%2d ",parent->value);
-    traversal(parent->right_child);
+     return 1;
+
 }
 int calculateHeight(TreeNode* parent){
     if(parent==NULL){
