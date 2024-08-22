@@ -16,6 +16,25 @@ void bubble_sort(int* array,int size){
 }
 void insertion_sort(Node** head,int size);
 void merge_sort( Node** head,int size);
-void selection_sort(int* array,int size);
+void selection_sort(int* array,int size){
+    for (int i=0;i<size-1;i++){
+        min=i;
+        for (int j=i+1;j<size;j++){
+            if (*(array+j)< *(array+min)){
+                min=j;
+            }
+        }
+        if(min != i){
+            *(array+i)= (*(array+i)) ^(*(array+min));
+            *(array+min)= (*(array+i)) ^(*(array+min));
+            *(array+i)= (*(array+i)) ^(*(array+min)); 
+        }    
+    }
+
+
+}
+
 void heap_sort(int* array,int size);
-void quick_sort(int* array,int size);
+void quick_sort(int* array,int size){
+    
+}
