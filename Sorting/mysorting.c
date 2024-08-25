@@ -14,9 +14,83 @@ void bubble_sort(int* array,int size){
         }
     }
 }
-void insertion_sort(Node** head,int size);
+void insertion_sort(Node** head){
+   
+   if (*head==NULL || (*head)->Next == NULL ){
+    return ;
 
-void merge_sort( Node** head,int size);
+   }
+    Node* result=NULL; 
+    while (*head!=NULL){
+        Node  * current =*head;
+        *head=(*head)->Next;
+        if (result == NULL || current->value < result->value){
+            current->Next=result ;
+            result=current;
+        }else{
+            Node * p=result;
+            while (p!= NULL){
+                if (p->Next== NULL || current->value < p->Next->value ){
+                    current->Next=p->Next;
+                    p->Next=current;
+                    break;
+                }
+                p=p->Next;
+            }
+        }
+    }
+    *head = result;
+}
+
+void merge_sort( Node** head){
+    Node * list_a;
+    Node * list_b;
+
+    if (*head == NULL || (*head)->Next == NULL){
+        return;
+    }
+    merge_sort_split( head,&list_a,&list_b);
+    merge_sort(&list_a);
+    merge_sort(&list_b);
+    *head = merge_sort_merged(list_a,list_b) ;
+
+}
+Node* merge_sort_merged(Node* list_a, Node* list_b){
+    Node* result =NULL;
+    if(list_a==NULL){
+        return list_b;
+    }
+    if (list_b == NULL){
+        return list_a;
+    }
+    if(list_a->value <= list_b->value ){
+        result=list_a;
+        result->Next=merge_sort_merged(list_a->Next,list_b);
+
+    }
+    else if (list_a->value > list_b->value){
+        result=list_b;
+        result->Next=merge_sort_merged(list_a,list_b->Next);
+    }
+    return result;
+}
+void merge_sort_split(Node** source,Node** list_a,Node** list_b){
+    Node* fast =(*source)->Next ;
+    Node* slow =*source;
+    while(fast!=NULL){
+        fast=fast->Next;
+        if (fast != NULL){
+            fast=fast->Next;
+            slow=slow->Next;
+        }
+
+    }
+    *list_a=*source;
+    *list_b=slow->Next;
+    slow->Next=NULL;
+}
+
+
 
 void selection_sort(int* array,int size){
     for (int i=0;i<size-1;i++){
@@ -41,7 +115,6 @@ void heap_sort(int* array,int size);
 
 
 
-#pragma quick sort  
 /// @brief use Divide and Conquer to solve quick sort
 void quick_sort(int* array,int start_index  ,int end_index){
     if (start_index<end_index){
@@ -67,5 +140,3 @@ int  quick_sort_partition(int* array,int start_index,int end_index){
 
     return i+1;
 }
-
-#pragma endregion
