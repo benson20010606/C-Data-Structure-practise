@@ -20,14 +20,14 @@ Complier:MinGW
     * insertion sort (2024/08/25) 
     * merge sort  (2024/08/25)
     * selection sort (2024/08/22) 
-    * heap sort 
+    * heap sort  (2024/08/26)
     * quick sort (2024/08/23) 
 
 8. Search
-    * Sequential Search
-    * Binary Search
+    * Sequential Search (2024/08/26)
+    * Binary Search (2024/08/26)
     * Binary Search tree Search
-    * Interpolation
+    * Interpolation (2024/08/26)
 
 
 ##  Self-assessment table 
@@ -57,11 +57,11 @@ Complier:MinGW
 |                    | **Insertion Sort**              | 2024/08/25   | 🟢 Basic Proficiency   |                                           |
 |                    | **Merge Sort**                  | 2024/08/25   | 🟡 Somewhat Familiar   |                       |
 |                    | **Selection Sort**              | 2024/08/22   | 🟢 Basic Proficiency   |                                          |
-|                    | **Heap Sort**                   |              | 🟡 Somewhat Familiar   |Using an array to implement heap sort is simpler because arrays support random access, which makes it easier to determine parent nodes. However, in the case of a linked list, an additional pointer to the parent node would be needed to facilitate the implementation.|
-|                    | **Quick Sort**                  | 2024/08/23   | 🟢 Basic Proficiency   |                                          |
+|                    | **Heap Sort**                   | 2024/08/26   | 🟡 Somewhat Familiar   |Using an array to implement heap sort is simpler because arrays support random access, which makes it easier to determine parent nodes. However, in the case of a linked list, an additional pointer to the parent node would be needed to facilitate the implementation.|
+|                    | **Quick Sort**                  | 2024/08/23   |🟢 Basic Proficiency   |                                          |
 | **Search**         |                                 |              |                         |                                         |
-|                    | **Sequential Search**           |              |                         |                                         |
-|                    | **Binary Search**               |              |                         |                                         |
+|                    | **Sequential Search**           | 2024/08/26   |🟢 Basic Proficiency   |                                         |
+|                    | **Binary Search**               | 2024/08/26   |🟢 Basic Proficiency   |                                         |
 |                    | **Binary Search Tree Search**   |              |                         |                                          |
-|                    | **Interpolation**               |              |                         |                                         |
+|                    | **Interpolation**               | 2024/08/26   |🟢 Basic Proficiency   |                                         |
 
