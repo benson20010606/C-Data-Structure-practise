@@ -18,7 +18,7 @@ Complier:MinGW
 7. Sorting
     * bubble sort (2024/08/22) 
     * insertion sort (2024/08/25) 
-    * merge sort 
+    * merge sort  (2024/08/25)
     * selection sort (2024/08/22) 
     * heap sort 
     * quick sort (2024/08/23) 
@@ -41,7 +41,7 @@ Complier:MinGW
 
 
 | Topic              | Subtopic                        | Date         | Proficiency Level       | Notes  (Describe specifically which parts are not familiar enough )                                 |
-|--------------------|---------------------------------|--------------|-------------------------|------------------------------------------|
+|--------------------|---------------------------------|--------------| -----------------------|------------------------------------------|
 | **Array**          |                                 | 2024/08/14   | 🟢 Basic Proficiency   |                                          |
 | **Linked List**    |                                 | 2024/08/15   | 🟢 Basic Proficiency   |                                          |
 | **Stack**          |                                 | 2024/08/16   | 🟢 Basic Proficiency   |                                          |
@@ -55,9 +55,9 @@ Complier:MinGW
 | **Sorting**        |                                 |              |                         |                                          |
 |                    | **Bubble Sort**                 | 2024/08/22   | 🟢 Basic Proficiency   |                                          |
 |                    | **Insertion Sort**              | 2024/08/25   | 🟢 Basic Proficiency   |                                           |
-|                    | **Merge Sort**                  |              | 🟡 Somewhat Familiar   | Struggling with the practical implementation of splitting linked lists, but have no issues with the merging process.                       |
+|                    | **Merge Sort**                  | 2024/08/25   | 🟡 Somewhat Familiar   |                       |
 |                    | **Selection Sort**              | 2024/08/22   | 🟢 Basic Proficiency   |                                          |
-|                    | **Heap Sort**                   |              | 🟡 Somewhat Familiar   |Previously, a max-heap tree was implemented. In theory, it is only necessary to extract the root step by step and maintain the max-heap tree. However, there is uncertainty about how to store the extracted values most efficiently.|
+|                    | **Heap Sort**                   |              | 🟡 Somewhat Familiar   |Using an array to implement heap sort is simpler because arrays support random access, which makes it easier to determine parent nodes. However, in the case of a linked list, an additional pointer to the parent node would be needed to facilitate the implementation.|
 |                    | **Quick Sort**                  | 2024/08/23   | 🟢 Basic Proficiency   |                                          |
 | **Search**         |                                 |              |                         |                                         |
 |                    | **Sequential Search**           |              |                         |                                         |

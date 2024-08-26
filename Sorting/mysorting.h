@@ -12,8 +12,8 @@ void selection_sort(int* array,int size);
 
 
 void heap_sort(int* array,int size);
-
-
+void build_max_heap(int* array,int size);
+void max_heapify(int* array,int size ,int index);
 
 
 void quick_sort(int* array,int start_index,int end_index);

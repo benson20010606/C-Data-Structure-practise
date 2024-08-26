@@ -110,12 +110,40 @@ void selection_sort(int* array,int size){
 
 }
 
-void heap_sort(int* array,int size);
+void heap_sort(int* array,int size){
+    build_max_heap(array,size);
 
+    for(int i=size-1; i>=0;i--){
+        *(array)=*(array) ^  *(array+i);
+        *(array+i)=*(array) ^  *(array+i);
+        *(array)=*(array) ^  *(array+i);
+        max_heapify(array,i,0);
+    }
+}
 
+void build_max_heap(int* array,int size){
+    for (int i = size/2-1 ;i>0;i--){
+        max_heapify(array,size,i);
+    }
+}
 
+void max_heapify(int* array,int size ,int index){
+    int left = index*2+1;
+    int right = index *2+2;
+    int largest = index;
+    if (left< size && *(array+left)  >  *(array+largest)   ){
+        largest= left;
+    }if (right < size && *(array+right)  >  *(array+largest)  ){
+        largest= right;
+    }
+    if (largest != index){
+        *(array+index)=*(array+index) ^  *(array+largest);
+        *(array+largest)=*(array+index) ^  *(array+largest);
+        *(array+index)=*(array+index) ^  *(array+largest);
+        max_heapify(array,size,largest);
+    }
+}
 
-/// @brief use Divide and Conquer to solve quick sort
 void quick_sort(int* array,int start_index  ,int end_index){
     if (start_index<end_index){
         int q= quick_sort_partition(array,start_index,end_index);
