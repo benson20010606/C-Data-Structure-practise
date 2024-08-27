@@ -5,7 +5,7 @@
 
 int sequential_search(int* array,int size,int key);
 int binary_search(int* array,int start ,int size,int key);
-int binary_search_tree_search(int* array,int size,int key);
+
 int interpolation_search(int* array,int start ,int end,int key);
 
 

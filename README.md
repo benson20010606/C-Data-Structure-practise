@@ -62,6 +62,6 @@ Complier:MinGW
 | **Search**         |                                 |              |                         |                                         |
 |                    | **Sequential Search**           | 2024/08/26   |🟢 Basic Proficiency   |                                         |
 |                    | **Binary Search**               | 2024/08/26   |🟢 Basic Proficiency   |                                         |
-|                    | **Binary Search Tree Search**   |              |                         |                                          |
+|                    | **Binary Search Tree Search**   | 2024/08/19   |🟢 Basic Proficiency   |Implemented in Tree Structure / Binary Search Tree / mysearch.c               |
 |                    | **Interpolation**               | 2024/08/26   |🟢 Basic Proficiency   |                                         |
 

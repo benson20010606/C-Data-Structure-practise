@@ -24,7 +24,7 @@ int binary_search(int* array,int start ,int end,int key){
     }
     return -1;
 }
-int binary_search_tree_search(int* array,int size,int key);
+
 int interpolation_search(int* array,int start ,int end,int key){
     quick_sort(array,start,end);
     while (start <= end ){
