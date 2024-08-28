@@ -26,7 +26,7 @@ Complier:MinGW
 8. Search
     * Sequential Search (2024/08/26)
     * Binary Search (2024/08/26)
-    * Binary Search tree Search
+    * Binary Search tree Search (2024/08/19)
     * Interpolation (2024/08/26)
 
 
