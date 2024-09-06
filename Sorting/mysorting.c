@@ -154,7 +154,7 @@ void quick_sort(int* array,int start_index  ,int end_index){
 int  quick_sort_partition(int* array,int start_index,int end_index){
     int x= *(array+end_index);  // assume end_index is pivot
     int i=start_index-1;
-    for (int j=start_index;i<end_index;i++){
+    for (int j=start_index;j<end_index;j++){
         if (*(array+j)<x){
             i=i+1;
             *(array+j)=*(array+j) ^ *(array+i);
