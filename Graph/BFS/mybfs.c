@@ -18,6 +18,12 @@ Graph* createGraph(int V){
     for (int i = 0; i < V; i++){
         graph->visited[i]=false;
     }
+
+    graph->distance=(int *) malloc(V*sizeof(int));
+    for (int i = 0; i < V; i++){
+        graph->distance[i]=0;
+    }
+
     return graph;
 }
 
@@ -43,12 +49,13 @@ void BFS(Graph * graph,int start){
     graph->visited[start] = true;
 
     while (front < rear){
-        int current = queue[front];
-        printf("now visited:%d \n ",current);
+        int current = queue[front++];
+        printf("now visited(%d):%d \n ",graph->distance[current],current);
         for (int i = 0; i < graph->V; i++) {
             if (graph->adj[current][i] == true && graph->visited[i] == false) {
                 queue[rear++] = i;
                 graph->visited[i] = true;
+                graph->distance[i]=graph->distance[current]+1;
             }
         }
     }
