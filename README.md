@@ -14,7 +14,8 @@ Complier:MinGW
     * Binary Tree & Heap  (2024/08/22) 
     * Red Black Tree 
 6. Graph Structure 
-    * To be determined
+    * Breadth-first search (2024/09/07)
+    * Depth-First-Search
 7. Sorting
     * bubble sort (2024/08/22) 
     * insertion sort (2024/08/25) 
@@ -51,7 +52,8 @@ Complier:MinGW
 |                    | **Binary Tree & Heap**          | 2024/08/22   | 🟢 Basic Proficiency   |                                          |
 |                    | **Red Black Tree**              |              | 🔴 Not Familiar        | Need to learn from scratch               |
 | **Graph Structure**|                                 |              |                         |                                          |
-|                    | **To be determined**            |              | 🟠                     |                                          |
+|                    | **Breadth-first search**        | 2024/09/07   | 🟡 Somewhat Familiar   |                                          |
+|                    | **Depth-First-Search**          |              |                         |                                           |
 | **Sorting**        |                                 |              |                         |                                          |
 |                    | **Bubble Sort**                 | 2024/08/22   | 🟢 Basic Proficiency   |                                          |
 |                    | **Insertion Sort**              | 2024/08/25   | 🟢 Basic Proficiency   |                                           |
@@ -59,9 +61,45 @@ Complier:MinGW
 |                    | **Selection Sort**              | 2024/08/22   | 🟢 Basic Proficiency   |                                          |
 |                    | **Heap Sort**                   | 2024/08/26   | 🟡 Somewhat Familiar   |Using an array to implement heap sort is simpler because arrays support random access, which makes it easier to determine parent nodes. However, in the case of a linked list, an additional pointer to the parent node would be needed to facilitate the implementation.|
 |                    | **Quick Sort**                  | 2024/08/23   |🟢 Basic Proficiency   |                                          |
-| **Search**         |                                 |              |                         |                                         |
+| **Search**         |                                 |              |                       |                                         |
 |                    | **Sequential Search**           | 2024/08/26   |🟢 Basic Proficiency   |                                         |
 |                    | **Binary Search**               | 2024/08/26   |🟢 Basic Proficiency   |                                         |
 |                    | **Binary Search Tree Search**   | 2024/08/19   |🟢 Basic Proficiency   |Implemented in Tree Structure / Binary Search Tree / mysearch.c               |
 |                    | **Interpolation**               | 2024/08/26   |🟢 Basic Proficiency   |                                         |
 
+
+
+
+
+
+
+
+## Study Notes
+
+### Array 
+
+### Linked list 
+### Stack 
+### Queue  
+
+### Tree Structure  
+#### Binary Search Tree  
+#### Binary Tree & Heap  
+#### Red Black Tree 
+
+### Graph Structure 
+#### To be determined
+
+### Sorting
+#### bubble sort 
+#### insertion sort 
+#### merge sort  
+#### selection sort 
+#### heap sort  
+#### quick sort 
+
+### Search
+#### Sequential Search 
+#### Binary Search 
+#### Binary Search tree Search 
+#### Interpolation 
